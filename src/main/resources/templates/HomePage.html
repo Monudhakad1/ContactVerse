@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+   <style>
+       .container{
+           margin:auto;
+           width:50%;
+           padding:30px;
+           background: coral;
+       }
+   </style>
+</head>
+<body>
+<div class="container" >
+<h1 data-th-text= "${name}" >Welcome to Contact Verse</h1>
+    <p> GithubRepoLink: <span data-th-text="${GithubRepo}">ss</span> </p>
+    <p>This is home page which is easily done </p>
+
+    <A th:href="${GithubRepo}">Click On me babes</A>
+</div>
+</body>
+</html>
