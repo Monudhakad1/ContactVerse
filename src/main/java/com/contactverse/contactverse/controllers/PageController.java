@@ -16,4 +16,21 @@ public class PageController {
         model.addAttribute("GithubRepo","https://github.com/monudhakad1/contactverse");
         return "HomePage";
     }
+
+//  about route
+
+    @RequestMapping("/about")
+    public String aboutPage() {
+        System.out.println("About is loading");
+        return "about";
+    }
+
+//     Services
+
+    @RequestMapping("/services")
+    public String servicePage() {
+        System.out.println("Service page is loading");
+        return "services";
+    }
+
 }

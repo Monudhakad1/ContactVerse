@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>About | ContactVerse</title>
+
+    <link th:href="@{/css/output.css}" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+<!-- Navbar -->
+<nav class="bg-blue-600 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">ContactVerse</h1>
+        <div class="space-x-4">
+            <a  class="hover:underline">Home</a>
+            <a class="hover:underline">About</a>
+            <a href="#" class="hover:underline">Login</a>
+        </div>
+    </div>
+</nav>
+
+<!-- About Section -->
+<section class="max-w-5xl mx-auto py-20 px-6 text-center">
+    <h2 class="text-4xl font-bold text-blue-700 mb-6">About ContactVerse</h2>
+    <p class="text-lg text-gray-700 mb-8">
+        ContactVerse is a modern contact management web application designed to help users store, organize, and retrieve contact information with ease. It is built using <span class="font-semibold">Spring Boot</span> for backend power and <span class="font-semibold">Tailwind CSS</span> for beautiful, responsive design.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <div class="bg-white rounded-2xl shadow-md p-6">
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">🎯 Mission</h3>
+            <p>
+                To simplify contact management through an intuitive, secure, and scalable platform that is easy to use and free to extend.
+            </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-6">
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">🛠 Technologies Used</h3>
+            <ul class="list-disc list-inside">
+                <li>Spring Boot (Java)</li>
+                <li>Thymeleaf Templating Engine</li>
+                <li>MySQL / MongoDB (backend DB)</li>
+                <li>Tailwind CSS (Frontend)</li>
+            </ul>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-6 md:col-span-2">
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">👨‍💻 Developer Info</h3>
+            <p>
+                This project is developed and maintained by <strong>Monu Dhakad</strong>, a passionate engineering student aspiring to become an SDE. The project is part of learning full-stack development using real-world tools and patterns.
+            </p>
+            <p class="mt-2">
+                GitHub Repository:
+                <a th:href="${GithubRepo}" class="text-blue-600 hover:underline" th:text="${GithubRepo}">View on GitHub</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-100 text-center py-6 mt-10 border-t text-gray-600 text-sm">
+    <p>&copy; 2025 ContactVerse. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
