@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="parent(content, title,script)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:replace="${title}">Base Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css">
+</head>
+<body>
+<div data-th-replace="navbar::navbar">
+</div>
+
+
+<div class="p-4">
+<section th:replace="${content}"></section>
+</div>
+
+<footer>
+    Footer: ContactVerse Lets Change the World
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<th:block data-th-replace="${script}"></th:block>
+</body>
+</html>

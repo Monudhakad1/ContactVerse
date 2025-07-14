@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title} ,~{::script})}">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:fragment="title">Service</title>
 </head>
 <body>
- <h1>This is services page</h1>
+<section id="content">
+    <h1>Welcome to service page</h1>
+    <p>Lorem ipsum dolor sit amet...</p>
+</section>
+<th:block th:fragment="script">
+    <script>
+        console.log('Service page script here.');
+    </script>
+</th:block>
 </body>
 </html>

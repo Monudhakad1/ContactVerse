@@ -1,6 +1,25 @@
 {
+  "name": "contactverse",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Monudhakad1/ContactVerse#readme",
+  "bugs": {
+    "url": "https://github.com/Monudhakad1/ContactVerse/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Monudhakad1/ContactVerse.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.10",
     "tailwindcss": "^4.1.10"
-  }
+  },
+  "devDependencies": {}
 }
