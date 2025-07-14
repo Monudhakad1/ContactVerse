@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"
+      th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:fregment="title" >contact Page</title>
+</head>
+<body>
+<div id="content">
+    <h1> ContactUs </h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores amet similique exercitationem at nam quia accusamus magni ut iure eos! Nulla recusandae voluptates nisi ullam dolor enim ea praesentium in.</p>
+
+</div>
+<th:block th:fragment="script">
+    <script>
+        console.log('contact page script here.');
+    </script>
+</th:block>
+</body>
+</html>
