@@ -1,13 +1,16 @@
 package com.contactverse.contactverse.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity(name="contact")
 public class Contact {
 //    the user connected to user table with OneToMany relationship
 
+    @Id
     private String id;
     private String name;
     private String email;
@@ -26,8 +29,11 @@ public class Contact {
 
     //  private List<String> socialLinks; // List of social links like Facebook, Twitter, LinkedIn, etc.
     @ManyToOne
-    public User user;
+    @JsonIgnore
+    private User user;
 
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    private List<Socials> links = new ArrayList<>();
 
 
 }

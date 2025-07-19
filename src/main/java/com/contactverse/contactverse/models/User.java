@@ -1,10 +1,7 @@
 package com.contactverse.contactverse.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +15,6 @@ import java.util.List;
 public class User {
 
     @Id
-
     private String userId;
 
     @Column(name = "user_name", nullable = false)
@@ -36,15 +32,23 @@ public class User {
     private String profilePic;
     private String PhoneNumber;
     // info
+    @Getter(value = AccessLevel.NONE)
     private Boolean enabled = false;
     private Boolean emailVerified = false;
     private String phoneVerified;
 
+    @Enumerated(value = EnumType.STRING)
     private Providers provider = Providers.SELF;
     private String providerId;
 
-    @OneToMany(mappedBy  = "user")
-    private List<Contact> contacts = new ArrayList<>() ;
+
+    // add more fields if needed
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    private List<Contact> contacts = new ArrayList<>();
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> roleList = new ArrayList<>();
+
 
 
 }
