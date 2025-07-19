@@ -1,4 +1,8 @@
 package com.contactverse.contactverse.models;
 
-public interface Providers {
+public enum Providers {
+    SELF ,
+    GOOGLE,
+    FACEBOOK,
+    GITHUB;
 }
