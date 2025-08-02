@@ -4,6 +4,7 @@ import jakarta.servlet.ServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class PageController {
@@ -45,10 +46,19 @@ public class PageController {
         return "login";
     }
 
-    @RequestMapping("/register")
+    @RequestMapping(value = "/register" )
     public String registerPage() {
         System.out.println("Register page is loading");
         return "register";
     }
 
+    @RequestMapping(value="/do-register"  ,  method= RequestMethod.POST)
+    public String processRegister() {
+//        Fetch form data
+//        validate data
+//        save data to database
+        // message rs
+//
+        return " redirect:/register" ;
+    }
 }

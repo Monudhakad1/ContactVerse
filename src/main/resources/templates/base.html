@@ -1,28 +1,20 @@
 <!DOCTYPE html>
-<html class="dark" lang="en" th:fragment="parent(content, title,script)" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" th:fragment="parent(content, title,script)" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title th:replace="${title}">Base Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css">
-<!--    Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
-<body>
-<div data-th-replace="navbar::navbar">
-</div>
-
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
+<div data-th-replace="navbar::navbar"></div>
 
 <div class="p-4">
-<section th:replace="${content}"></section>
+    <section th:replace="${content}"></section>
 </div>
 
-<footer>
-    Footer: ContactVerse Lets Change the World
-</footer>
 <script data-th-src="@{'/js/script.js'}"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <th:block data-th-replace="${script}"></th:block>
 </body>

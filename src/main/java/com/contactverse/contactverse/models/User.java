@@ -39,6 +39,7 @@ public class User {
 
     @Enumerated(value = EnumType.STRING)
     private Providers provider = Providers.SELF;
+
     private String providerId;
 
 
